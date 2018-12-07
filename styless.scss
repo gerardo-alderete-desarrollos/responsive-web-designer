@@ -1,29 +1,7 @@
-$breakpoints: (
-    small: 320px,
-    medium: 640px
-);
+/* METODOLOGIAS
 
-@mixin rwd($breakpoint) {
-    @media screen and (min-width: $breakpoint){
-        @content;
-    }
-    
-}
+    MOGILE FIRST
+    DESKTOP FIRST
+    CONTENT FIRST
 
-body {
-    background: red;
-    
-    @include rwd(100px){
-        background: yellow;
-    }
-    @include rwd(100px){
-        background: green;
-    }
-}
-/* body {
-    background: red;
-
-    @media screen and (min-width: 600px){
-        background: yellow;
-    }
-    }*/
+*/

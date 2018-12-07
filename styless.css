@@ -1,16 +1,7 @@
-body {
-  background: red; }
-  @media screen and (min-width: 100px) {
-    body {
-      background: yellow; } }
-  @media screen and (min-width: 100px) {
-    body {
-      background: green; } }
+/* METODOLOGIAS
 
-/* body {
-    background: red;
+    MOGILE FIRST
+    DESKTOP FIRST
+    CONTENT FIRST
 
-    @media screen and (min-width: 600px){
-        background: yellow;
-    }
-    }*/
+*/
