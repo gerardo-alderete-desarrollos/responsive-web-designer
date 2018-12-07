@@ -1,7 +1,12 @@
-/* METODOLOGIAS
-
-    MOGILE FIRST
-    DESKTOP FIRST
-    CONTENT FIRST
-
+/* UNIDADES RELATIVAS
+1. Porcentaje %
 */
+
+p {
+    font-size: 2em;
+    background: yellow;
+    margin: 0 auto;
+    width: 75%;
+    min-width: 320px;
+    max-width: 800px;
+}
