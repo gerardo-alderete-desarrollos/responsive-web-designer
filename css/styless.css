@@ -1,15 +1,17 @@
-@charset "UTF-8";
-/* UNIDADES RELATIVAS
-1. Porcentaje %
-2. em( tamaño de fuente del contexto) y rem( tamaño de fuente del root <html>)
+/* UNIDADES DE VIEWPORT: vw , vh , vmin, vmax
+    1vw = 1% del ancho del viewport
+    1vh = 1% del alto del viewport
+    1vmin = 1% del lado menor del viewport
+    1vmax = 1% del lado mayor del viewport
 
-1em = 100% del tamaño de fuente en el contexto
 */
-button {
+:root {
+  --scroll-bar: 13px; }
+
+body {
+  padding-bottom: 200em; }
+
+footer {
   font-size: 2em;
-  border: none;
-  border-radius: .25em;
   background: red;
-  color: #fff;
-  padding: .5em 1.5em;
-  margin: 2rem; }
+  width: calc(100vw -var(--scroll-bar)); }
