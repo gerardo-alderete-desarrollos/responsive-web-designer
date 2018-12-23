@@ -1,28 +1,14 @@
-/* UNIDADES DE VIEWPORT: vw , vh , vmin, vmax
-    1vw = 1% del ancho del viewport
-    1vh = 1% del alto del viewport
-    1vmin = 1% del lado menor del viewport
-    1vmax = 1% del lado mayor del viewport
-
-*/
-:root{
-    --scroll-bar: 13px;
+p{
+    background: yellow;
+    margin: .5em;
+    font-size: 1.5em;
 }
 
-body {
-    // padding-bottom: 200em;
+.container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-footer{
-    font-size: 2em;
-    background: red;
-    width: calc(100vw -var(--scroll-bar));
-}
-
-header {
-    background: red;
-    color: #fff;
-    text-align: center;
-    padding: 10vmin 0;
-
+p {
+    flex: 1 1 15rem;
 }
