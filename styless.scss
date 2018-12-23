@@ -1,15 +1,36 @@
-p{
-    background: yellow;
-    margin: .5em;
+/* 
+    Breakpoints
+    Major breakpoints
+    Minor breakpoints
+
+*/
+
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px
+);
+
+@mixin rwd($bp) {
+    @if map-has-key($breakpoints, $bp){
+        @media screen and ( min-width: map-get($breakpoints, $bp)) {
+            @content;
+        }
+    }@else {
+        @media screen and (min-width: $bp) {
+            @content;
+        }
+    }
+    
 }
-
-.container {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-
-}
-
-p {
-
+body {
+    background: red;
+    @include rwd(500px){
+        background: green;
+    }
+    @include rwd(large){
+        background: yellow;
+    }
 }
