@@ -8,10 +8,13 @@
 :root {
   --scroll-bar: 13px; }
 
-body {
-  padding-bottom: 200em; }
-
 footer {
   font-size: 2em;
   background: red;
   width: calc(100vw -var(--scroll-bar)); }
+
+header {
+  background: red;
+  color: #fff;
+  text-align: center;
+  padding: 10vmin 0; }
