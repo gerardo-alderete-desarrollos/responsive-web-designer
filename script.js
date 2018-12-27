@@ -11,7 +11,7 @@
 
  const color = 'red';
  const size = 2;
- const style = `
+ const myStyle = `
     background: ${color};
     color: white;
     margin-top: 4em;
@@ -19,4 +19,14 @@
  `
 
  //1. Sobreescribiendo
-document.getElementById('title').setAttribute('style', style);
+// document.getElementById('title').setAttribute('style', myStyle);
+
+const setStyles = (element, styles) => {
+    element.setAttribute('style', styles);
+}
+
+setStyles(document.getElementById('title'), myStyle);
+
+
+//2.- Agregando a los estilos inline existentes
+// document.getElementById('title').style += `;${myStyle}`;
