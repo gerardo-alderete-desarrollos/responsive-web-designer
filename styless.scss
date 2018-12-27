@@ -1,8 +1,21 @@
-.red {
-    background: yellow;
+// .red {
+//     background: yellow;
+// }
+
+// h1 {
+//     font-size: 3em;
+//     text-align: center;
+// }
+
+:root {
+    --name: 'Gerardo';
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
+
+    &::after {
+        content: var(--name);
+    }
 }

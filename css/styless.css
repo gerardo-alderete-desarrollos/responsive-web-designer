@@ -1,6 +1,8 @@
-.red {
-  background: yellow; }
+:root {
+  --name: 'Gerardo'; }
 
 h1 {
   font-size: 3em;
   text-align: center; }
+  h1::after {
+    content: var(--name); }
