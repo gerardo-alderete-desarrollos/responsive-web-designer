@@ -1,38 +1,30 @@
-// /* 
-//     CSSOM
-//     CSS Object Model 
-//     window.getComputedStyle(elemento).getPropertyValue() // lee los estilos de un elemento
+/* Media query con Javascript */
 
-//     element.style // todo elemento del DOM tiene la propiedad style
-//  */
+const mediumBp =matchMedia('(min-width: 800px)')
+// console.log(mediumBp);
 
-// //  document.body.style.backgroundColor = 'red';
-//  document.body.classList.add('red');
+// addEventListener('resize', () => {
+//     if( mediumBp.matches){
+//         document.body.style.background = 'red';
+//     }else {
+//         document.body.style.background = 'yellow';
 
-//  const color = 'red';
-//  const size = 2;
-//  const myStyle = `
-//     background: ${color};
-//     color: white;
-//     margin-top: 4em;
-//     border-bottom: ${size * 2}px solid black;
-//  `
+//     }
+// })
 
-//  //1. Sobreescribiendo
-// // document.getElementById('title').setAttribute('style', myStyle);
+// addEventListener('DOMContentLoaded', () => {
+//     if( mediumBp.matches){
+//         document.body.style.background = 'red';
+//     }else {
+//         document.body.style.background = 'yellow';
 
-// const setStyles = (element, styles) => {
-//     element.setAttribute('style', styles);
-// }
+//     }
+// })
 
-// setStyles(document.getElementById('title'), myStyle);
-
-
-// //2.- Agregando a los estilos inline existentes
-// // document.getElementById('title').style += `;${myStyle}`;
-
-//Modificar variables
-document.documentElement.style.setProperty('--name', 'Beto');
-
-//Leer variables
-console.log(getComputedStyle(document.documentElement).getPropertyValue('--name'));
+const changeColor = mql => {
+    mql.matches
+        ? document.body.style.background = 'red'
+        : document.body.style.background = 'yellow'
+}
+changeColor(mediumBp);
+mediumBp.addListener(changeColor);
