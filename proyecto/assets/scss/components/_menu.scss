@@ -1,0 +1,14 @@
+.main-menu {
+    /* RESETEO DEL MENU */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    /* FIN DEL RESETEO DEL MENU */
+}
+
+.main-menu__link {
+    color: $text-color;
+    margin-left: 1rem;
+}
