@@ -1,6 +1,13 @@
 :root {
   --first-color: #007BDF; }
 
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000; }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -63,7 +70,8 @@ img {
   top: 4rem;
   right: -80vw;
   transition: right .7s;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  z-index: var(--z-fixed); }
   @media screen and (min-width: 960px) {
     .main-nav {
       position: static;

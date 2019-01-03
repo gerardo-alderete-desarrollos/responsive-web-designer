@@ -32,7 +32,8 @@
     right: -80vw;
     transition: right .7s;
     padding-top: 1rem;
-
+    z-index: var(--z-fixed);
+    
     @include from(l) {
         position: static;
         background: transparent;
