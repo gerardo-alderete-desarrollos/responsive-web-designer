@@ -8,18 +8,32 @@
   --z-fixed: 100;
   --z-modal: 1000; }
 
+:root {
+  --h1-font-size: 2rem;
+  --body-font-size: .9rem;
+  --small-font-size: .75rem; }
+  @media screen and (min-width: 960px) {
+    :root {
+      --h1-font-size: 2.5rem;
+      --body-font-size: 1rem;
+      --small-font-size: .8rem; } }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: lato, sans-serif; }
+  font-family: lato, sans-serif;
+  font-size: var(--body-font-size); }
 
 a {
   text-decoration: none; }
 
 img {
   max-width: 100%; }
+
+h1 {
+  font-size: var(--h1-font-size); }
 
 .l-container {
   max-width: 1200px;
@@ -92,16 +106,22 @@ img {
       display: none; } }
 
 .main-banner {
-  padding: 5rem 1rem 6rem;
+  --padding: 2rem 1rem 3rem;
+  --logo-height: 3rem;
+  padding: var(--padding);
   background: var(--first-color);
   color: #fff;
   text-align: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
   position: relative; }
+  @media screen and (min-width: 960px) {
+    .main-banner {
+      --padding: 5rem 1rem 6rem;
+      --logo-height: 5rem; } }
   .main-banner__content {
     position: relative; }
   .main-banner__logo {
-    height: 5rem;
+    height: var(--logo-height);
     display: block;
     margin: 0 auto .5rem; }
   .main-banner__hero-image {
@@ -113,3 +133,6 @@ img {
     object-fit: cover;
     object-position: center;
     opacity: .1; }
+
+.small {
+  font-size: var(--small-font-size); }
