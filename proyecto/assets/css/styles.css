@@ -38,23 +38,44 @@ img {
   padding-left: 0;
   list-style: none;
   /* FIN DEL RESETEO DEL MENU */ }
+  @media screen and (min-width: 960px) {
+    .main-menu {
+      display: flex; } }
 
 .main-menu__item {
   padding: 1rem; }
 
 .main-menu__link {
-  color: #53575A;
+  color: #CCC;
   margin-left: 1rem; }
+  @media screen and (min-width: 960px) {
+    .main-menu__link {
+      color: #53575A; } }
 
 .main-nav {
   position: fixed;
   height: calc(100vh - 4rem);
   width: 80vw;
   background: #282D31;
-  top: 4rem; }
+  top: 4rem;
+  right: -80vw;
+  transition: right .7s;
+  padding-top: 1rem; }
+  @media screen and (min-width: 960px) {
+    .main-nav {
+      position: static;
+      background: transparent;
+      padding-top: 0;
+      height: auto;
+      width: auto; } }
+  .main-nav.show {
+    right: 0; }
 
 .main-menu-toggle {
   width: 2.2rem;
   height: 1.6rem;
   background: linear-gradient(#282D31 20%, transparent 20%, transparent 40%, #282D31 40%, #282D31 60%, transparent 60%, transparent 80%, #282D31 80%);
   cursor: pointer; }
+  @media screen and (min-width: 960px) {
+    .main-menu-toggle {
+      display: none; } }

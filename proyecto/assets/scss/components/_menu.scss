@@ -5,14 +5,22 @@
     padding-left: 0;
     list-style: none;
     /* FIN DEL RESETEO DEL MENU */
+
+    @include from(l){
+        display: flex;
+    }
 }
 .main-menu__item {
     padding: 1rem;
 
 }
 .main-menu__link {
-    color: $text-color;
+    color: $border-color;
     margin-left: 1rem;
+
+    @include from(l){
+        color: $text-color
+    }
 } 
 
 .main-nav {
@@ -21,7 +29,21 @@
     width: 80vw;
     background: $dark-color;
     top: $header-height;
-    // right: -80vw;
+    right: -80vw;
+    transition: right .7s;
+    padding-top: 1rem;
+
+    @include from(l) {
+        position: static;
+        background: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
+    
+    &.show {
+       right: 0; 
+    }
 }
 
 .main-menu-toggle {
@@ -33,4 +55,8 @@
                                 $color 60%, transparent 60%,
                                 transparent 80%, $color 80% );
     cursor: pointer;
+
+    @include from(l) {
+        display: none;
+    }
 }
