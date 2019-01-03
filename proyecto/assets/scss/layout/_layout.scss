@@ -8,6 +8,28 @@
     flex-wrap: wrap;
 }
 
+.l-section {
+    margin-bottom: 2rem;
+    @include from(l){
+        margin-bottom: 4rem;
+    }
+    &--diagonal {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fafafa;   
+            z-index: var(--z-back); 
+            transform: skewY(-1deg) scaleY(1.025);        
+            
+            @include from(l) {
+                transform: skewY(-2deg) scaleY(1.1);        
+            }
+        }
+    }
+}
 // Anchos personalizados
 
 @for $i from 1 through 20 {

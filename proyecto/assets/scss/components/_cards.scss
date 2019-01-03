@@ -1,11 +1,12 @@
 .card {
     margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
     &__img img {
         display: block;
     }
     &__content {
         padding: 1rem;
-        border: 1px solid var(--color-border);
+        background: #f0f0f0;
     }
 
     &__subtitle {
@@ -21,5 +22,13 @@
         align-items: center;
         justify-content: space-between;
 
+    }
+}
+
+.cards-grid {
+    @include from(l){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
     }
 }

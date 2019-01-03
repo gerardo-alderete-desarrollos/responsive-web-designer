@@ -56,6 +56,25 @@ h2 {
   margin-left: auto;
   flex-wrap: wrap; }
 
+.l-section {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 960px) {
+    .l-section {
+      margin-bottom: 4rem; } }
+  .l-section--diagonal {
+    position: relative; }
+    .l-section--diagonal:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+      z-index: var(--z-back);
+      transform: skewY(-1deg) scaleY(1.025); }
+      @media screen and (min-width: 960px) {
+        .l-section--diagonal:before {
+          transform: skewY(-2deg) scaleY(1.1); } }
+
 .s-5 {
   width: 5%; }
 
@@ -257,12 +276,13 @@ h2 {
     opacity: .1; }
 
 .card {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border); }
   .card__img img {
     display: block; }
   .card__content {
     padding: 1rem;
-    border: 1px solid var(--color-border); }
+    background: #f0f0f0; }
   .card__subtitle {
     margin-top: -1rem;
     margin-bottom: .5rem;
@@ -274,6 +294,12 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+
+@media screen and (min-width: 960px) {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; } }
 
 .button {
   color: var(--color-alert);
